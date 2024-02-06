@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.target=methods
+comment0.target=UI
 comment0.text=\n\ Author\ Dima\ K.\n
 comment1.params=
-comment1.target=void\ mapgen()
+comment1.target=void\ generateBoard()
 numComments=2
