@@ -5,6 +5,7 @@ public class EventLoop
 {
     State state = new State();
     UI ui = new UI();
+    mapGen mp = new mapGen();
     int row, col, num;
     
     public static void main (String[] args){
@@ -13,6 +14,6 @@ public class EventLoop
     }
     
     public void run(){
-    
+        ui.printBoard(state);
     }
 }

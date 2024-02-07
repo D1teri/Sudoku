@@ -5,8 +5,7 @@
 public class Constants
 {
     // Board size
-    public static final int NORMAL_BOARD_ROW = 9;
-    public static final int NORMAL_BOARD_COL = 9;
+    public static final int BOARD_SIZE = 9;
     
     // Game state
     public static final int STANDBY = 0;
@@ -19,6 +18,7 @@ public class Constants
     public static final int QUIT_PROGRAM = 7;
     
     // Strings
+    
     public static final String DIVIDER_STRING = "|---|---|---|---|---|---|---|---|---|";
     public static final String BOARD_STRING = "| %s | %s | %s | %s | %s | %s | %s | %s | %s |";
     public static final String TITLE = "Thanks for playing sudoku!";
