@@ -7,6 +7,7 @@ public class State
     private int gameState = Constants.STANDBY;
     private int[][] board = new int[Constants.BOARD_SIZE][Constants.BOARD_SIZE];
     private int num = 0;
+    private String diff;
     
     public int getGameState() {
         return gameState;
@@ -16,20 +17,9 @@ public class State
         this.gameState = gameState;
     }
     
-    public int getNum() {
-        return num;
+    public int setDiff(String diff){
+        if(this.diff.equals("Easy") || this.diff.equals("easy")){
+            return 1;
+        } else return 2;
     }
-
-    public void setNum(int num) {
-        this.num = num;
-    }
-    
-    public int getBoardCell(int row, int col) {
-        return this.board[row][col];
-    }
-
-    public void setBoardCell(int row, int col, int num) {
-        this.board[row][col] = num;
-    }
-    
 }
