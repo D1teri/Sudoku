@@ -17,9 +17,9 @@ public class UI
     
     public String getDiff(){
         System.out.println(Constants.DIFFICULTY);
-        String difft = scanner.next();
+        String diff = scanner.nextLine();
         System.out.println();
-        return difft;
+        return diff;
     }
     
     
