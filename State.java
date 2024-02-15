@@ -7,8 +7,7 @@ public class State
     private int gameState = Constants.STANDBY;
     private int[][] board = new int[Constants.BOARD_SIZE][Constants.BOARD_SIZE];
     private int num = 0;
-    private int diffnum = 0;
-    private String diff = "";
+    private int diff = 0;
     
     public int getGameState() {
         return gameState;
@@ -19,19 +18,19 @@ public class State
     }
     
     public int getDiff (){
-        return diffnum;
+        return diff;
     }
     
-    public int setDiff(String diff){
+    public int setDiff(int diff){
         this.diff = diff;
-        if(diff.equals("Easy") || diff.equals("easy")){
-            diffnum = 1;
-        } else if(diff.equals("Med") || diff.equals("med")
-        || diff.equals("Medium") || diff.equals("medium")){
-            diffnum = 2;
-        } else if(diff.equals("Hard") || diff.equals("hard")){
-            diffnum = 3;
+        return diff;
+    }
+    
+    public void mapGen(){
+        if(diff == 1){
+            for(int i = 0; i >= Constants.BOARD_SIZE; i++){
+            
+            }
         }
-        return diffnum;
     }
 }

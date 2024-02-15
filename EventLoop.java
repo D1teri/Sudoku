@@ -22,7 +22,7 @@ public class EventLoop
                 state.setDiff(ui.getDiff());
                 state.setGameState(Constants.GEN);
             } else if (gameState == Constants.GEN){
-            
+                state.mapGen();
             }
         }
     }

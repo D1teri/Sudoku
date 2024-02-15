@@ -29,6 +29,7 @@ public class Constants
     public static final String INVALID_ROW_OR_COLUMN = "Your row and column must be from 1 to 9";
     public static final String INVALID_MOVE_ERROR = "Row %d column %d is not a valid move. Please try again";
     public static final String INVALID_NUMBER = "Your number must be from 1 to 9";
+    public static final String INVALID_DIFF = "Your difficulty of th egame should be one out of the before listed, please try again";
     public static final String VICTORY = "Good job, you won!";
     public static final String START_NEW_GAME = "Start a new game (Y or N)? --> ";
     

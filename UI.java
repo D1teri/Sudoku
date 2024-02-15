@@ -15,10 +15,23 @@ public class UI
         scanner = new Scanner(System.in);         
     }
     
-    public String getDiff(){
-        System.out.println(Constants.DIFFICULTY);
-        String diff = scanner.nextLine();
-        System.out.println();
+    public int getDiff(){
+        int diff = 0;
+        while (diff <= 0 || diff >= 4){
+            System.out.println(Constants.DIFFICULTY);
+            String strdiff = scanner.nextLine();
+            if(strdiff.equals("Easy") || strdiff.equals("easy")){
+                diff = 1;
+            } else if(strdiff.equals("Med") || strdiff.equals("med")
+            || strdiff.equals("Medium") || strdiff.equals("medium")){
+                diff = 2;
+            } else if(strdiff.equals("Hard") || strdiff.equals("hard")){
+                diff = 3;
+            } else {
+                System.out.println(Constants.INVALID_DIFF);
+                System.out.println();
+            }
+        }
         return diff;
     }
     
