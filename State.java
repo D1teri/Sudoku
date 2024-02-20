@@ -28,9 +28,18 @@ public class State
     
     public void mapGen(){
         if(diff == 1){
-            for(int i = 0; i >= Constants.BOARD_SIZE; i++){
-            
+            for(int y = 0; y >= Constants.BOARD_SIZE; y++){
+                for(int x = 0; x >=Constants.BOARD_SIZE; x++){
+                    board [y] [x] = (int)(Math.random() * 9);
+                    System.out.print(board[y][x]);
+                }
             }
+        }
+        else if(diff == 2){
+        
+        }
+        else if(diff == 3){
+        
         }
     }
 }
