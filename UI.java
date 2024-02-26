@@ -35,5 +35,14 @@ public class UI
         return diff;
     }
     
-    
+    public void printBoard(State state){
+        System.out.println(Constants.DIVIDER_STRING);
+        for (int row = 0; row < Constants.BOARD_SIZE; row++) {
+            for (int col = 0; col < Constants.BOARD_SIZE; col++){
+                System.out.printf(Constants.BOARD_STRING, state.getBoardCell(row,col));
+            }
+            System.out.println();
+            System.out.println(Constants.DIVIDER_STRING);
+        }
+    }
 }

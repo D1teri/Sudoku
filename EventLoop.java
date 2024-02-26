@@ -23,7 +23,7 @@ public class EventLoop
                 state.setGameState(Constants.GEN);
             } else if (gameState == Constants.GEN){
                 state.mapGen();
-                
+                ui.printBoard(state);
             }
         }
     }

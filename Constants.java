@@ -20,7 +20,7 @@ public class Constants
     // Strings
     
     public static final String DIVIDER_STRING = "|---|---|---|---|---|---|---|---|---|";
-    public static final String BOARD_STRING = "| %s | %s | %s | %s | %s | %s | %s | %s | %s |";
+    public static final String BOARD_STRING = "| %s ";
     public static final String TITLE = "Thanks for playing sudoku!";
     public static final String DIFFICULTY = "What difficulty you want to play? (Hard, Med, Easy)";
     public static final String GET_ROW_MOVE = "Enter the row for your next move --> ";
