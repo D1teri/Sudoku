@@ -21,6 +21,7 @@ public class State
         };
     int [][] playerBoard = new int[Constants.BOARD_SIZE][Constants.BOARD_SIZE];
     public int pocket; 
+    private int lives = 5;
     private int num;
     private int diff = 0;
 
@@ -52,6 +53,14 @@ public class State
     
     public void setBoardCell(int row, int col, int num){
         playerBoard[row][col] = num;
+    }
+    
+    public int getLives(){
+        return this.lives;
+    }
+    
+    public int setLives(){
+        return lives--;
     }
 
     public void boardGen(){
@@ -169,7 +178,21 @@ public class State
         }
     }
     
-    public check
+    public boolean isWinner(){
+        int check = 0;
+        for(int y = 0; y < 9; y++){
+            for(int x = 0; x < 9; x++){
+                if(board[y][x] == playerBoard[y][x]) check++;
+            }
+        }
+        if(check == 81) return true;
+        else return false;
+    }
+    
+    public boolean isLoser(){
+        if(lives == 0) return true;
+        else return false;
+    }
 }
 
 

@@ -20,13 +20,18 @@ public class UI
         else return " ";
     }
     
+    public void invalMove(int row, int col){
+        System.out.printf(Constants.INVALID_MOVE_ERROR, row, col);
+        System.out.println();
+    }
+    
     public int getDiff(){
         int diff = 0;
         while (diff <= 0 || diff > 60){
             System.out.println(Constants.DIFFICULTY);
             String strdiff = scanner.nextLine();
             if(strdiff.equals("Easy") || strdiff.equals("easy")){
-                diff = 35;
+                diff = 1;
             } else if(strdiff.equals("Med") || strdiff.equals("med")
             || strdiff.equals("Medium") || strdiff.equals("medium")){
                 diff = 40;
@@ -115,12 +120,15 @@ public class UI
         if(row <= 0 || row > 9) check = false;
         if (col <= 0 || col > 9) check = false;
         if (num <= 0 || num > 9) check = false;
-        if (state.getBoardCell(row, col) != 0) check = false;
-        if (state.checkBoardCell(row, col, num)) check = true;
+        if (state.getBoardCell(row-1, col-1) != 0) check = false;
+        if (state.checkBoardCell(row-1, col-1, num)) check = true;
         else check = false;
         return check;
     }
     
-    
-    
+    public void livesLeft(State state){
+        int lives = state.getLives();
+        System.out.printf(Constants.LIVES, lives);
+        System.out.println();
+    }
 }

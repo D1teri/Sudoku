@@ -26,11 +26,18 @@ public class EventLoop
                 ui.printBoard(state);
                 state.setGameState(Constants.GET_MOVE);
             } else if (gameState == Constants.GET_MOVE){
+                ui.livesLeft(state);
+                
                 row = ui.getMoveRow();
                 col = ui.getMoveCol();
                 num = ui.getMoveNum();
                 if (ui.isLegalMove(state, row, col, num)) {
                     state.setGameState(Constants.MAKE_MOVE);
+                } else { 
+                    state.setLives();
+                    ui.invalMove(row,col);
+                    ui.printBoard(state);
+                    state.setGameState(Constants.CHECK_IF_LOSE);
                 }
             } else if (gameState == Constants.MAKE_MOVE) {
                 state.setBoardCell(row-1, col-1, num);
