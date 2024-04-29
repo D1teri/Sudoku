@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=State
-comment0.text=\n\ Author\ Dima\ K.\n
 comment1.params=
 comment1.target=int\ getGameState()
 comment2.params=gameState
@@ -11,6 +10,12 @@ comment4.params=diff
 comment4.target=int\ setDiff(int)
 comment5.params=row\ col
 comment5.target=int\ getBoardCell(int,\ int)
-comment6.params=
-comment6.target=void\ mapGen()
-numComments=7
+comment6.params=row\ col\ num
+comment6.target=boolean\ checkBoardCell(int,\ int,\ int)
+comment7.params=row\ col\ num
+comment7.target=void\ setBoardCell(int,\ int,\ int)
+comment8.params=
+comment8.target=void\ boardGen()
+comment9.params=
+comment9.target=void\ delofNum()
+numComments=10

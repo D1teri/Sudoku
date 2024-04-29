@@ -1,10 +1,20 @@
 #BlueJ class context
 comment0.target=UI
-comment0.text=\n\ Author\ Dima\ K.\n
+comment0.text=\r\n\ Author\ Dima\ K.\r\n
 comment1.params=
 comment1.target=UI()
-comment2.params=
-comment2.target=int\ getDiff()
-comment3.params=state
-comment3.target=void\ printBoard(State)
-numComments=4
+comment2.params=num
+comment2.target=java.lang.String\ getNum(int)
+comment3.params=
+comment3.target=int\ getDiff()
+comment4.params=state
+comment4.target=void\ printBoard(State)
+comment5.params=
+comment5.target=int\ getMoveRow()
+comment6.params=
+comment6.target=int\ getMoveCol()
+comment7.params=
+comment7.target=int\ getMoveNum()
+comment8.params=state\ row\ col\ num
+comment8.target=boolean\ isLegalMove(State,\ int,\ int,\ int)
+numComments=9
