@@ -16,6 +16,7 @@ public class EventLoop
         while (state.getGameState() != Constants.QUIT_PROGRAM) {
             int gameState = state.getGameState();
             if (gameState == Constants.STANDBY) {
+                state.resetLives();
                 state.setGameState(Constants.DIFF);
             } else if (gameState == Constants.DIFF) {
                 state.setDiff(ui.getDiff());
@@ -56,6 +57,12 @@ public class EventLoop
                     state.setGameState(Constants.GAME_OVER);
                 } else {
                     state.setGameState(Constants.GET_MOVE);
+                }
+            }else if (gameState == Constants.GAME_OVER) {
+                if (ui.startNewGame()) {
+                    state.setGameState(Constants.STANDBY);
+                } else {
+                    state.setGameState(Constants.QUIT_PROGRAM);
                 }
             }
         }

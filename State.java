@@ -59,6 +59,10 @@ public class State
         return this.lives;
     }
     
+    public int resetLives(){
+        return lives = 5;
+    }
+    
     public int setLives(){
         return lives--;
     }

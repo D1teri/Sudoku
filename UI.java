@@ -29,7 +29,7 @@ public class UI
         int diff = 0;
         while (diff <= 0 || diff > 60){
             System.out.println(Constants.DIFFICULTY);
-            String strdiff = scanner.nextLine();
+            String strdiff = scanner.next();
             if(strdiff.equals("Easy") || strdiff.equals("easy")){
                 diff = 1;
             } else if(strdiff.equals("Med") || strdiff.equals("med")
@@ -130,5 +130,11 @@ public class UI
         int lives = state.getLives();
         System.out.printf(Constants.LIVES, lives);
         System.out.println();
+    }
+    
+    public boolean startNewGame() {
+        System.out.println(Constants.START_NEW_GAME);
+        String yesOrNo = scanner.next();
+        return yesOrNo.equals("Y") || yesOrNo.equals("y");
     }
 }
